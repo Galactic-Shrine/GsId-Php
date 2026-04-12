@@ -1,0 +1,11 @@
+services:
+  GalacticShrine\GsId\GsIdSymfonyOptionsConfigurator:
+    arguments:
+      $options:
+        default_case: Lower
+        default_text_format: N
+        default_json_format: D
+        default_database_format: N
+        lock: true
+    tags:
+      - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: 4096 }

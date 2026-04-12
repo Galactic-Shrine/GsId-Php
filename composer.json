@@ -1,0 +1,42 @@
+{
+  "name": "galactic-shrine/gsid",
+  "version": "1.0.0",
+  "description": "GsId 256-bit identifier system for Galactic-Shrine projects.",
+  "type": "library",
+  "license": "MPL-2.0",
+  "authors": [
+    {
+      "name": "⋞Galactic-Shrine⋟"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "doctrine/dbal": "^4.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "GalacticShrine\\GsId\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GalacticShrine\\GsId\\Tests\\": "tests/"
+    }
+  },
+  "suggest": {
+    "symfony/framework-bundle": "Required to use the optional GsId Symfony bundle integration.",
+    "symfony/config": "Required to use the optional GsId Symfony configuration tree.",
+    "symfony/dependency-injection": "Required to use the optional GsId Symfony extension.",
+    "symfony/http-kernel": "Required to use the optional GsId Symfony bundle and kernel request listener."
+  },
+  "scripts": {
+    "test": "phpunit",
+    "lint": "php -l src/*.php && php -l tests/*.php"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
