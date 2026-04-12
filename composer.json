@@ -1,6 +1,6 @@
 {
   "name": "galactic-shrine/gsid",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "GsId 256-bit identifier system for Galactic-Shrine projects.",
   "type": "library",
   "license": "MPL-2.0",

@@ -6,7 +6,7 @@ PHP library to generate, parse, validate, and convert 256-bit `GsId` identifiers
 
 ## Status
 
-- Version: `1.0.0`
+- Version: `1.0.2`
 - Level: production
 
 ## Key points

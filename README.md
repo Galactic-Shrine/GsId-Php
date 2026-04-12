@@ -6,7 +6,7 @@ Bibliothèque PHP pour générer, parser, valider et convertir des identifiants 
 
 ## Statut
 
-- Version : `1.0.0`
+- Version : `1.0.2`
 - Niveau : production
 
 ## Points clés

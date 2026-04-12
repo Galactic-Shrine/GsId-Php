@@ -6,7 +6,7 @@ Libreria PHP per generare, analizzare, validare e convertire identificatori `GsI
 
 ## Stato
 
-- Versione: `1.0.0`
+- Versione: `1.0.2`
 - Livello: produzione
 
 ## Punti chiave

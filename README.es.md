@@ -6,7 +6,7 @@ Biblioteca PHP para generar, analizar, validar y convertir identificadores `GsId
 
 ## Estado
 
-- Versión: `1.0.0`
+- Versión: `1.0.2`
 - Nivel: producción
 
 ## Puntos clave
