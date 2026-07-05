@@ -33,7 +33,7 @@
   },
   "scripts": {
     "test": "phpunit",
-    "lint": "php -l src/*.php && php -l tests/*.php"
+    "lint": "php tools/lint.php"
   },
   "config": {
     "sort-packages": true

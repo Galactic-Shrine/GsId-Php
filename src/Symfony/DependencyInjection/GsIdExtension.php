@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace GalacticShrine\GsId\Symfony\DependencyInjection;
 
-use GalacticShrine\GsId\GsIdDoctrineType;
-use GalacticShrine\GsId\GsIdSymfonyOptionsConfigurator;
+use GalacticShrine\GsId\Bridge\Doctrine\Types\GsidType;
+use GalacticShrine\GsId\Symfony\GsIdOptionsConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
@@ -21,7 +21,7 @@ final class GsIdExtension extends Extension implements PrependExtensionInterface
         $container->prependExtensionConfig('doctrine', [
             'dbal' => [
                 'types' => [
-                    GsIdDoctrineType::Name => GsIdDoctrineType::class,
+                    GsidType::Name => GsidType::class,
                 ],
             ],
         ]);
@@ -36,7 +36,7 @@ final class GsIdExtension extends Extension implements PrependExtensionInterface
         $config = $this->processConfiguration($configuration, $configs);
 
         $container
-            ->register(GsIdSymfonyOptionsConfigurator::class, GsIdSymfonyOptionsConfigurator::class)
+            ->register(GsIdOptionsConfigurator::class, GsIdOptionsConfigurator::class)
             ->setArgument('$options', $config)
             ->addTag('kernel.event_listener', [
                 'event' => 'kernel.request',

@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
-namespace GalacticShrine\GsId;
+namespace GalacticShrine\GsId\Symfony;
+
+use GalacticShrine\GsId\GsIdCase;
+use GalacticShrine\GsId\GsIdException;
+use GalacticShrine\GsId\GsIdFormat;
+use GalacticShrine\GsId\GsIdOptions;
 
 /**
  * Configurateur runtime pour appliquer les options GsId dans une application Symfony.
  */
-final class GsIdSymfonyOptionsConfigurator
+final class GsIdOptionsConfigurator
 {
     /**
      * @var array<string, mixed>

@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
-namespace GalacticShrine\GsId;
+namespace GalacticShrine\GsId\Symfony\Bridge;
+
+use GalacticShrine\GsId\GsId;
+use GalacticShrine\GsId\GsIdCase;
+use GalacticShrine\GsId\GsIdFormat;
+use Stringable;
 
 /**
  * Pont léger pour Symfony (routes, formulaires, serializer, DTO).
  * Cette classe ne remplace pas le composant symfony/uid ; elle fournit
  * simplement des conversions stables vers et depuis les chaînes GsId.
  */
-final class GsIdSymfonyUidBridge
+final class GsIdToUid
 {
     public static function normalizeForRoute(
         GsId|string|null $value,
@@ -44,7 +49,7 @@ final class GsIdSymfonyUidBridge
         return self::normalizeForRoute($value, $format, $case);
     }
 
-    public static function denormalizeFromSerializer(null|string|\Stringable $value): ?GsId
+    public static function denormalizeFromSerializer(null|string|Stringable $value): ?GsId
     {
         if ($value === null) {
             return null;

@@ -11,8 +11,9 @@ use GalacticShrine\GsId\GsIdException;
 use GalacticShrine\GsId\GsIdFormat;
 use GalacticShrine\GsId\GsIdOptions;
 use GalacticShrine\GsId\GsIdParser;
-use GalacticShrine\GsId\GsIdSymfonyOptionsConfigurator;
+use GalacticShrine\GsId\Symfony\GsIdOptionsConfigurator;
 use GalacticShrine\GsId\GsIdValidator;
+use GalacticShrine\GsId\Symfony\Bridge\GsIdToUid;
 use PHPUnit\Framework\TestCase;
 
 final class GsIdCoreTest extends TestCase
@@ -114,9 +115,9 @@ final class GsIdCoreTest extends TestCase
         GsIdOptions::setDefaultCase(GsIdCase::Upper);
     }
 
-    public function testSymfonyOptionsConfiguratorShouldApplyArrayConfiguration(): void
+    public function testOptionsConfiguratorShouldApplyArrayConfiguration(): void
     {
-        new GsIdSymfonyOptionsConfigurator([
+        new GsIdOptionsConfigurator([
             'default_case' => 'Lower',
             'default_text_format' => 'N',
             'default_json_format' => 'D',
@@ -127,6 +128,14 @@ final class GsIdCoreTest extends TestCase
         $id = GsId::fromString(self::FormattedUpper);
 
         self::assertSame(strtolower(self::NormalizedUpper), $id->toString());
+    }
+
+    public function testGsIdToUidShouldNormalizeAndDenormalizeRouteValue(): void
+    {
+        $id = GsId::fromString(self::FormattedUpper);
+
+        self::assertSame(self::FormattedUpper, GsIdToUid::normalizeForRoute($id, GsIdFormat::D, GsIdCase::Upper));
+        self::assertTrue($id->equals(GsIdToUid::denormalizeFromRoute(self::FormattedUpper)));
     }
 
     private static function forceResetOptions(): void

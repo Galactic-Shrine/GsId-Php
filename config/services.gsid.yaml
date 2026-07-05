@@ -1,7 +1,7 @@
 # Configuration alternative sans bundle Symfony.
 # Avec le bundle GalacticShrine\GsId\Symfony\GsIdBundle, utiliser plutôt config/packages/gsid.yaml.
 services:
-  GalacticShrine\GsId\GsIdSymfonyOptionsConfigurator:
+  GalacticShrine\GsId\Symfony\GsIdOptionsConfigurator:
     arguments:
       $options:
         default_case: Lower

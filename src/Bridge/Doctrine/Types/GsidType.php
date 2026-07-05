@@ -2,17 +2,22 @@
 
 declare(strict_types=1);
 
-namespace GalacticShrine\GsId;
+namespace GalacticShrine\GsId\Bridge\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\Type;
+use GalacticShrine\GsId\GsId;
+use GalacticShrine\GsId\GsIdConstants;
+use GalacticShrine\GsId\GsIdException;
+use GalacticShrine\GsId\GsIdFormat;
+use GalacticShrine\GsId\GsIdOptions;
 
 /**
  * Type Doctrine DBAL pour stocker GsId au format configuré globalement.
  * La longueur SQL suit GsIdOptions::getDefaultDatabaseFormat().
  */
-final class GsIdDoctrineType extends Type
+final class GsidType extends Type
 {
     public const string Name = 'gsid';
 
