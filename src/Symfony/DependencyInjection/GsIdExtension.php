@@ -4,12 +4,29 @@ declare(strict_types=1);
 
 namespace GalacticShrine\GsId\Symfony\DependencyInjection;
 
+use GalacticShrine\GsId\GsIdDoctrineType;
 use GalacticShrine\GsId\GsIdSymfonyOptionsConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
+use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 
-final class GsIdExtension extends Extension
+final class GsIdExtension extends Extension implements PrependExtensionInterface
 {
+    public function prepend(ContainerBuilder $container): void
+    {
+        if (!$container->hasExtension('doctrine')) {
+            return;
+        }
+
+        $container->prependExtensionConfig('doctrine', [
+            'dbal' => [
+                'types' => [
+                    GsIdDoctrineType::Name => GsIdDoctrineType::class,
+                ],
+            ],
+        ]);
+    }
+
     /**
      * @param array<int, array<string, mixed>> $configs
      */

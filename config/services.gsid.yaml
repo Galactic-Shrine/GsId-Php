@@ -1,3 +1,5 @@
+# Configuration alternative sans bundle Symfony.
+# Avec le bundle GalacticShrine\GsId\Symfony\GsIdBundle, utiliser plutôt config/packages/gsid.yaml.
 services:
   GalacticShrine\GsId\GsIdSymfonyOptionsConfigurator:
     arguments:
