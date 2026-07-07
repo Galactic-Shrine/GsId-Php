@@ -16,8 +16,8 @@ use PHPUnit\Framework\TestCase;
 
 final class GsIdTest extends TestCase
 {
-    private const string NormalizedValue = '9F2A6C1E8D4B7A90A13F9C2DE88B421091AF77CB4D6E39A2FC018AD92E7B5C64';
-    private const string FormattedValue = '9F2A6C1E8D4B7A90-A13F9C2D-E88B4210-91AF77CB-4D6E39A2-FC018AD92E7B5C64';
+    private const NormalizedValue = '9F2A6C1E8D4B7A90A13F9C2DE88B421091AF77CB4D6E39A2FC018AD92E7B5C64';
+    private const FormattedValue = '9F2A6C1E8D4B7A90-A13F9C2D-E88B4210-91AF77CB-4D6E39A2-FC018AD92E7B5C64';
 
     protected function tearDown(): void
     {

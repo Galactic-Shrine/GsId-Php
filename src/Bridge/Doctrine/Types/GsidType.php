@@ -19,7 +19,7 @@ use GalacticShrine\GsId\GsIdOptions;
  */
 final class GsidType extends Type
 {
-    public const string Name = 'gsid';
+    public const Name = 'gsid';
 
     public function getName(): string
     {

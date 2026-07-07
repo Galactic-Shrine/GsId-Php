@@ -11,8 +11,8 @@ Elle fournit un cœur PHP pur, un type Doctrine DBAL, un bundle Symfony optionne
 | Élément | Valeur |
 | --- | --- |
 | Package | `galactic-shrine/gsid` |
-| Version majeure | `2.0.0` |
-| PHP | `>= 8.3` |
+| Version majeure | `2.0.1` |
+| PHP | `>= 8.1` |
 | Licence | `MPL-2.0` |
 | Type d’identifiant | 256 bits / 32 octets / 64 caractères hexadécimaux |
 | Format Doctrine | `gsid` |

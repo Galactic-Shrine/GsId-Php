@@ -11,8 +11,8 @@ Include un core PHP puro, un tipo Doctrine DBAL, un bundle Symfony opzionale, un
 | Elemento | Valore |
 | --- | --- |
 | Pacchetto | `galactic-shrine/gsid` |
-| Versione maggiore | `2.0.0` |
-| PHP | `>= 8.3` |
+| Versione maggiore | `2.0.1` |
+| PHP | `>= 8.1` |
 | Licenza | `MPL-2.0` |
 | Dimensione identificatore | 256 bit / 32 byte / 64 caratteri esadecimali |
 | Tipo Doctrine | `gsid` |

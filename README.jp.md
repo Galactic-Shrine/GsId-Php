@@ -11,8 +11,8 @@
 | 項目 | 値 |
 | --- | --- |
 | パッケージ | `galactic-shrine/gsid` |
-| メジャーバージョン | `2.0.0` |
-| PHP | `>= 8.3` |
+| メジャーバージョン | `2.0.1` |
+| PHP | `>= 8.1` |
 | ライセンス | `MPL-2.0` |
 | 識別子サイズ | 256 bits / 32 bytes / 64 hexadecimal characters |
 | Doctrine 型 | `gsid` |

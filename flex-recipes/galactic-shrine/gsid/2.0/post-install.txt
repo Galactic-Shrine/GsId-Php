@@ -1,5 +1,0 @@
-<bg=blue;fg=white> Galactic-Shrine GsId </>
-
-  * The GsId Symfony bundle has been enabled.
-  * A default configuration file was created at config/packages/gsid.yaml.
-  * If DoctrineBundle is installed, the bundle automatically registers the DBAL type "gsid".
